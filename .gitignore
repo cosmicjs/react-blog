@@ -1,0 +1,5 @@
+## Server
+node_modules
+config
+npm-debug.log*
+/dist

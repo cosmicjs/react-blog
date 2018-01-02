@@ -1,0 +1,99 @@
+html,body {
+  margin:0;
+  height:120%;
+  font-family: 'Josefin Sans', sans-serif;
+
+}
+
+.author{
+  display:inline-block;
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background-size:cover;
+  box-shadow:0 2px 3px rgba(0,0,0,0.3);
+  margin-bottom:3px
+}
+
+.header {
+  position:relative;
+  overflow:hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  height:50vw;
+  min-height:$headerMinHeight;
+  max-height:$headerMaxHeight;
+  min-width:300px;
+  color:#eee;
+}
+
+.header a{
+  color:#eee
+}
+
+@media only screen and (min-width: 1000px) {
+    .header {
+        height:20vw;
+    }
+    .info > h1 {
+      font-size: 50px;
+
+    }
+    .info > h4 > a {
+      font-size: 20px;
+    }
+    .author {
+      width:55px;
+      height:55px;
+    }
+}
+
+@media only screen and (max-width: 999px) {
+    .header {
+      height:10vw;
+    }
+}
+
+.info{
+  width:100%;
+  padding:0 10% 0 10%;
+  text-align:center;
+  text-shadow:0 2px 3px rgba(0,0,0,0.2)
+}
+
+
+.info h4, .meta{
+  font-size:0.7em
+}
+.meta{
+  font-style:italic;
+}
+@keyframes grow{
+  0% { transform:scale(1)}
+  50% { transform:scale(1.2)}
+}
+.content{
+  padding:5% 10%;
+  text-align:justify;
+  color: #2f2f2f;
+  font-size: 17px;
+  line-height: 26px;
+  margin:10px 0;
+  font-weight: 300;
+}
+
+.btn {
+  color:#333;
+  border:2px solid;
+  border-radius:3px;
+  text-decoration:none;
+  display:inline-block;
+  padding:5px 10px;
+  margin: auto;
+  font-weight:600;
+}
