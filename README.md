@@ -2,11 +2,11 @@
 ## React, Redux, Node, Cosmic JS
 
 
-1. [React/Redux](#header-react/redux)
-1. [Node](#header-node)
-1. [Config](#header-config)
-1. [Development](#header-development)
-1. [Demo](#header-demo)
+1. [React](#react)
+1. [Node](#node)
+1. [Config](#config)
+1. [Development](#development)
+1. [Demo](#demo)
 
 
 
@@ -18,7 +18,7 @@
 Cosmic.getObjects(credentials, (err, response) => {})
 ```
 
-## React/Redux
+## React
 - ```src/app/*```
 - Redux calls our Node API server, which in turn retrieves our Cosmic JS blog content.
 
