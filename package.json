@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start:server": "./node_modules/nodemon/bin/nodemon.js dist/app.js --exec babel-node --presets env",
+    "start:server": "./node_modules/nodemon/bin/nodemon.js lib/app.js --exec babel-node --presets env",
     "start:client": "./node_modules/.bin/webpack-dev-server --port=3000 --inline",
     "serve": "node dist/app.js",
     "clean": "rm -rf dist && mkdir dist",
