@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { togglePost, fetchBlogPosts } from '../actions'
 import { fetchSlugPost } from '../actions/slug'
 import PropTypes from 'prop-types'
-import logo from '../logo.svg'
+import Logo from '../components/logo'
 import '../scss/index.scss'
 
 class Post extends Component {
@@ -17,7 +17,7 @@ class Post extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          <Logo height={80} width={70} styleName="App-logo"/>
           <h1 className="App-title">CosmicJS</h1>
         </header>
           <PostList
