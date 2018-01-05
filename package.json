@@ -4,6 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "start" : "bash scripts/start-all.sh",
     "start:server": "./node_modules/nodemon/bin/nodemon.js lib/app.js --exec babel-node --presets env",
     "start:client": "./node_modules/.bin/webpack-dev-server --port=3000 --inline",
     "serve": "node dist/app.js",
