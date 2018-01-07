@@ -11,7 +11,7 @@ import '../scss/index.scss'
 class Post extends Component {
 
   componentDidMount(){
-    this.props.fetchData('http://localhost:5000/api/posts')
+    this.props.fetchData(window.location.href + 'api/posts')
   }
 
   render() {
