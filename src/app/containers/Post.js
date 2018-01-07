@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { togglePost, fetchBlogPosts } from '../actions'
 import { fetchSlugPost } from '../actions/slug'
 import PropTypes from 'prop-types'
+import Footer from '../components/Footer'
 import Logo from '../components/logo'
 import '../scss/index.scss'
 
@@ -15,7 +16,7 @@ class Post extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div>
         <header className="App-header">
           <Logo height={80} width={70} styleName="App-logo"/>
           <h1 className="App-title">Cosmic JS</h1>
@@ -23,6 +24,7 @@ class Post extends Component {
           <PostList
             posts={this.props.data}
             />
+        <Footer />
       </div>
     );
   }

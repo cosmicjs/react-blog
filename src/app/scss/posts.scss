@@ -1,15 +1,18 @@
+.postList{
+  overflow: hidden;
+}
+
 .cardContainer{
   margin: 4% 1%;
   height: 400px;
-  top: -150px;
   border-radius: 4px;
   position: relative;
+  text-align: center;
   background: white;
   box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
   float: left;
   font-family: 'Josefin Sans', sans-serif;
   color: $backgroundColor;
-  z-index: 0;
   transition: width 0.1s linear;
 }
 

@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { fetchSlugPost } from '../actions/slug'
 import Content from '../components/contentSlug'
 import Header from '../components/headerSlug'
+import Footer from '../components/Footer'
 import moment from 'moment';
 
 class Slug extends Component {
@@ -23,6 +24,7 @@ class Slug extends Component {
         <Content
           post={this.props.slug.content}
           />
+        <Footer />
       </div>
     )
   }

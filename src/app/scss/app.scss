@@ -1,16 +1,14 @@
 html,body {
-  margin:0;
-  height:100%;
+  margin: 0;
+  padding: 0;
+  height: 100%;
   font-family: 'Josefin Sans', sans-serif;
 
 }
 
 .footer {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: #efefef;
+  position: absolute;
+  width: 100%;
 }
 
 .logoFooter {
@@ -18,14 +16,10 @@ html,body {
 }
 
 .footer > span {
-  float: left;
   padding-top: 15px;
+  float: left;
 }
 
-.App {
-  text-align: center;
-  margin-bottom: -142px;
-}
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -36,6 +30,8 @@ html,body {
   background-color: $backgroundColor;
   height: $headerMinHeight;
   color: white;
+  text-align: center;
+  margin-bottom: -142px;
 }
 
 .App-title {

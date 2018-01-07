@@ -4,7 +4,7 @@ import PostComponent from '../components/postItem'
 import moment from 'moment'
 
 const PostList  = ({posts}) => (
-  <ul>
+  <ul className="postList">
     {posts.map((item, index) => (
       <PostComponent
         slug={item.slug}
