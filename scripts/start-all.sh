@@ -1,6 +1,7 @@
 #!/bin/bash
 
-npm run start:server &
-npm run start:client &
+./node_modules/.bin/webpack -p &
+npm run build:server &
+NODE_ENV=production npm run serve &
 
 wait
