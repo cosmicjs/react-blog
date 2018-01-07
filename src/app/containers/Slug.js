@@ -8,7 +8,7 @@ import moment from 'moment';
 
 class Slug extends Component {
   componentDidMount(){
-    this.props.fetchSlug(window.location.href + 'api/posts/' + this.props.match.params.slug);
+    this.props.fetchSlug(window.location.origin + '/api/posts/' + this.props.match.params.slug);
    }
 
   render(){
