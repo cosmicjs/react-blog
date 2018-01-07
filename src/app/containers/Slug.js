@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { fetchSlugPost } from '../actions/slug'
 import Content from '../components/contentSlug'
 import Header from '../components/headerSlug'
-import Footer from '../components/Footer'
+import Footer from '../components/footer'
 import moment from 'moment';
 
 class Slug extends Component {

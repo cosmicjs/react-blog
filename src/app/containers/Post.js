@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { togglePost, fetchBlogPosts } from '../actions'
 import { fetchSlugPost } from '../actions/slug'
 import PropTypes from 'prop-types'
-import Footer from '../components/Footer'
+import Footer from '../components/footer'
 import Logo from '../components/logo'
 import '../scss/index.scss'
 
