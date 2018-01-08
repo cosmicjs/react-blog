@@ -18,7 +18,7 @@ class Post extends Component {
     return (
       <div>
         <header className="App-header">
-          <Logo height={80} width={70} styleName="App-logo"/>
+          <Logo height={80} width={80} styleName="App-logo"/>
           <h1 className="App-title">Cosmic JS</h1>
         </header>
           <PostList
