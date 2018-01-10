@@ -46,4 +46,4 @@ module.exports = config;
 ```
 
 
-## [Demo](http://67.207.81.214:5000/)
+## [Demo](https://cosmicjs.com/apps/react-blog)
