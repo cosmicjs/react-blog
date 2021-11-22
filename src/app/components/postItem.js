@@ -4,9 +4,9 @@ import PropTypes from 'prop-types'
 import moment from 'moment'
 
 
-const Post = ({ completed, image, title, slug, author, date, authorImage}) => {
+const Post = ({ completed, image, title, slug, author, date, authorImage,pid}) => {
   return (
-    <Link to={slug}>
+    <Link to={pid}>
       <div className="cardContainer" >
         <div className="card-image">
           <img src={image}></img>

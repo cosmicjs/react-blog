@@ -3,6 +3,8 @@ const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
 
 const paths = {
   BUILD: path.resolve(__dirname, 'dist/build'),
@@ -17,6 +19,7 @@ let config = {
     path: paths.BUILD,
     filename: 'bundle.js'
   },
+  mode:"development",
   module: {
     rules: [
       {
@@ -25,15 +28,13 @@ let config = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['es2015', 'react', 'stage-2']
+            presets: ['@babel/preset-env', '@babel/preset-react']
           }
        }
      },
      {
        test: /\.(css|scss)$/,
-       loader: ExtractTextPlugin.extract({
-         use: ['css-loader', 'sass-loader']
-       }),
+       use:[MiniCssExtractPlugin.loader,'css-loader', 'sass-loader'],
      },
      {
        test: /\.(png|jpg|gif|svg)$/,
@@ -41,13 +42,17 @@ let config = {
          'file-loader',
        ],
      },
+     {
+      test: /\.html$/,
+      use: 'html-loader'
+    }
    ],
   },
   plugins : [
     new HtmlWebpackPlugin({
       template: path.join(paths.PUBLIC, 'index.html')
     }),
-    new ExtractTextPlugin('style.css'),
+    new MiniCssExtractPlugin(),
   ],
   devServer: {
     port: 3000,
@@ -60,6 +65,7 @@ let config = {
   resolve: {
     extensions: ['.js', '.jsx'],
   }
+  
 }
 
 module.exports = config;

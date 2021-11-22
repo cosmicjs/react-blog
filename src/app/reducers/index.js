@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux'
-import { routerReducer } from 'react-router-redux'
+import { connectRouter } from 'connected-react-router'
 import posts from './posts'
 import slug from './slug'
 
-const cosmicBlog = combineReducers({
+const cosmicBlog = (history) => combineReducers({
   posts,
   slug,
-  router: routerReducer
+  router: connectRouter(history),
 })
 
 export default cosmicBlog
