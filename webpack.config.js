@@ -64,8 +64,8 @@ let config = {
   },
   resolve: {
     extensions: ['.js', '.jsx'],
-  }
-  
+  },
+  devtool: 'source-map'  
 }
 
 module.exports = config;

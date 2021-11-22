@@ -11,7 +11,7 @@
     "clean": "rm -rf dist && mkdir dist",
     "test": "mocha --compilers js:babel-core/register --require ./app/src/test/helpers --require ./app/src/test/helpers/enzyme.js  ./app/src/test/*.spec.js",
     "build:server": "babel lib -d dist",
-    "build:client": "./node_modules/.bin/webpack -d",
+    "build:client": "./node_modules/.bin/webpack",
     "build": "npm-run-all build:*",
     "production": "npm-run-all build:* && NODE_ENV=production node ./dist/app.js;"
   },
