@@ -6,12 +6,12 @@
   "scripts": {
     "start": "npm run clean; ./node_modules/.bin/webpack -p; npm run build:server; NODE_ENV=production npm run serve",
     "start:server": "node ./node_modules/nodemon/bin/nodemon.js lib/app.js --exec babel-node --presets @babel/preset-env",
-    "start:client": "./node_modules/.bin/webpack-dev-server --port=3000",
+    "start:client": "./node_modules/.bin/webpack-dev-server --port=3000 --mode development",
     "serve": "node ./dist/app.js",
     "clean": "rm -rf dist && mkdir dist",
     "test": "mocha --compilers js:babel-core/register --require ./app/src/test/helpers --require ./app/src/test/helpers/enzyme.js  ./app/src/test/*.spec.js",
     "build:server": "babel lib -d dist",
-    "build:client": "./node_modules/.bin/webpack",
+    "build:client": "./node_modules/.bin/webpack --mode production",
     "build": "npm-run-all build:*",
     "production": "npm-run-all build:* && NODE_ENV=production node ./dist/app.js;"
   },

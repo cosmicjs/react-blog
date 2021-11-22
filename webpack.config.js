@@ -19,7 +19,6 @@ let config = {
     path: paths.BUILD,
     filename: 'bundle.js'
   },
-  mode:"development",
   module: {
     rules: [
       {
