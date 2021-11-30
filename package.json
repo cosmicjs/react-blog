@@ -4,16 +4,16 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "npm run clean; ./node_modules/.bin/webpack -p; npm run build:server; NODE_ENV=production npm run serve",
+    "start": "npm run clean & ./node_modules/.bin/webpack & npm run build:server & cross-env NODE_ENV=production npm run serve",
     "start:server": "node ./node_modules/nodemon/bin/nodemon.js lib/app.js --exec babel-node --presets @babel/preset-env",
     "start:client": "./node_modules/.bin/webpack-dev-server --port=3000 --mode development",
     "serve": "node ./dist/app.js",
     "clean": "rm -rf dist && mkdir dist",
     "test": "mocha --compilers js:babel-core/register --require ./app/src/test/helpers --require ./app/src/test/helpers/enzyme.js  ./app/src/test/*.spec.js",
     "build:server": "babel lib -d dist",
-    "build:client": "./node_modules/.bin/webpack --mode production",
+    "build:client": "./node_modules/.bin/webpack",
     "build": "npm-run-all build:*",
-    "production": "npm-run-all build:* && NODE_ENV=production node ./dist/app.js;"
+    "production": "npm run build & cross-env NODE_ENV=production npm run serve"
   },
   "author": "",
   "license": "ISC",
@@ -28,6 +28,7 @@
     "cookie-parser": "1.4.5",
     "cors": "2.8.5",
     "cosmicjs": "4.1.2",
+    "cross-env": "^7.0.3",
     "css-loader": "^6.5.1",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.6",
