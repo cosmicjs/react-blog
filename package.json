@@ -13,8 +13,8 @@
     "build:server": "babel lib -d dist",
     "build:client": "./node_modules/.bin/webpack",
     "build": "npm-run-all build:*",
-    "production": "npm run build & cross-env NODE_ENV=production npm run serve"
-  },
+    "production": "npm run build && cross-env NODE_ENV=production npm run serve"
+  },  
   "author": "",
   "license": "ISC",
   "dependencies": {
