@@ -1,16 +1,20 @@
 import React from 'react'
-import { Route, Link } from 'react-router-dom'
+import {Route, Link, Routes, BrowserRouter } from 'react-router-dom'
 import Post from './containers/Post'
 import Slug from './containers/Slug'
 
 
-const Routes = () => (
+const RouteList = () => (
   <div>
     <main>
-      <Route exact path="/" component={Post} />
-      <Route exact path="/:slug" component={Slug} />
+      <BrowserRouter>
+        <Routes>  
+          <Route exact path="/" element={<Post />} />
+          <Route exact path="/:slug" element={<Slug />} />
+          </Routes>
+        </BrowserRouter>
     </main>
   </div>
 )
 
-export default Routes
+export default RouteList

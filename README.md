@@ -15,7 +15,20 @@
 - Node REST API to query Cosmic JS DB
 - [cosmicjs-node](https://github.com/cosmicjs/cosmicjs-node)
 ``` javascript
-Cosmic.getObjects(credentials, (err, response) => {})
+const params = {
+  query: {
+    type: 'posts',
+    locale: 'en' // optional, if localization set on Objects
+  },
+  limit: 5,
+  props: 'id,slug,title,content', // get only what you need
+  sort: '-created_at' // optional, defaults to order in dashboard
+}
+bucket.getObjects(params).then(data => {
+  console.log(data)
+}).catch(err => {
+  console.log(err)
+})
 ```
 
 ## React

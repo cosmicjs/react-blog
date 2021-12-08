@@ -14,6 +14,7 @@ const PostList  = ({posts}) => (
         date={moment(item.created).format('MMM DD YYYY')}
         image={item.metadata.hero.url}
         title={item.title}
+        pid = {item.id}
         />
     ))}
   </ul>
